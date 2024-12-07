@@ -76,7 +76,7 @@ body {
 }
 
 .team h2 {
-    color: pink;
+    color: #9140d4;
 }
 
 .team-grid {
@@ -103,7 +103,7 @@ button {
 
 button:hover {
     background-color: rgb(243, 229, 243);
-    color: pink;
+    color: #9140d4  ;
 }
 
 .team-img {
