@@ -56,3 +56,56 @@ h2 {
     padding: 10px 0;
     position: relative;
 }
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg, #f76c6c, #ffffff), 
+                url('pattern.png'); 
+    background-size: cover, 200px 200px;
+}
+.resizable-box {
+    width: 200px;
+    height: 80px;
+    border: 1px solid #ccc;
+    resize: both;
+    overflow: auto;
+    outline: 3px solid pink;
+    outline-offset: 5px;
+    margin-left: 41%;
+}
+.transformed-box {
+    width: 100px;
+    height: 30px;
+    background-color: #e3d2ec;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+.transformed-box:hover {
+    transform: translate(50px, 50px) rotate(45deg) scale(1.5) skew(10deg, 10deg);
+}
+
+.rotate3d {
+    width: 120px;
+    height: 30px;
+    background-color: #fbc2eb;
+    margin: 20px;
+    transition: transform 0.5s;
+}
+
+.rotate3d:hover {
+    transform: rotateX(45deg) rotateY(45deg);
+}
+.draggable {
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px dashed #333;
+    text-align: center;
+    line-height: 50px;
+    margin: 20px auto;
+    cursor: grab;
+}
+

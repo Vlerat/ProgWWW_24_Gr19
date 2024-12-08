@@ -137,3 +137,100 @@ button:hover {
 .footer a:hover {
     color: white;
 }
+header {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.multiple-columns {
+    column-count: 3; 
+    column-gap: 20px; 
+    column-rule: 2px solid #9140d4; 
+}
+body {
+    margin: 0;
+    font-family: 'Arial, sans-serif';
+    background-color: white;
+    color: #5c5c5c;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.navbar {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5c5c5c;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    color: #5c5c5c;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgb(243, 229, 243);
+    color: pink;
+}
+
+.multiple-columns {
+    column-count: 3; 
+    column-gap: 20px; 
+    column-rule: 2px solid #9140d4; 
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    margin-top: 20px;
+}
+
+#drag-area {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#draggable-box {
+    width: 100px;
+    height: 100px;
+    background-color: #a6c1ee;
+    cursor: move;
+}

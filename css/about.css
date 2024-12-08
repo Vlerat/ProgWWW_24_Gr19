@@ -82,3 +82,15 @@
 .footer a:hover {
     color: white;
 }
+.team-member {
+    transform: perspective(1000px) rotateY(15deg);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.about h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

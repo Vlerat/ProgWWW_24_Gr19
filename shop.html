@@ -20,7 +20,14 @@
     </nav>
 
     <section class="shop">
-        <h1>Our Candles</h1>
+
+        <div class="resizable-box">
+            <h1>Our Candles</h1>
+        </div>
+        <div class="transformed-box">
+          <p> Best Products</p> 
+        </div>
+        <div class="rotate3d"><p>Only on our shop</p></div>
         <div class="card-container">
 
             <div class="card">
@@ -70,7 +77,6 @@
                 <p class="price">$13.99</p>
                 <button class="buy-now">Buy Now</button>
             </div>
-
             <div class="card">
                 <img src="Images/F7.png" alt="Christmas Cheer 3-Candle Set" class="card-image">
                 <h2>Christmas Cheer 3-Candle Set</h2>
@@ -89,7 +95,29 @@
 
         </div>
     </section>
+    <form id="order-form">
+        <h3>Order Your Candle</h3>
+        <label for="candle-type">Choose Candle Type:</label>
+        <input list="candles" id="candle-type" autocomplete="on" placeholder="Choose a candle" required>
+        <datalist id="candles">
+            <option value="Soy Wax">
+            <option value="Beeswax">
+            <option value="Paraffin Wax">
+        </datalist>
 
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" max="100" pattern="\d+" required>
+
+        <label for="delivery">Delivery Date:</label>
+        <input type="date" id="delivery" required>
+
+        <label for="coupon">Coupon Code (optional):</label>
+        <input type="text" id="coupon" maxlength="10" pattern="[A-Za-z0-9]{5,10}">
+
+        <output id="order-summary"></output>
+        <button type="submit">Place Order</button>
+    </form>
+</section>
     <footer class="footer">
         <p>&copy; 2024 Candle Shop. All rights reserved.</p>
     </footer>

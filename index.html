@@ -16,6 +16,11 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <div class="multiple-columns">
+        <p>Cozy</p>
+        <p>Relaxation</p>
+        <p>Glow</p>
+    </div>
 
     <section class="hero">
         <div class="hero-text">
@@ -29,6 +34,36 @@
             <img src="images/Candleee.png", alt="Candles" />
             <img src="images/c.png", alt="Candles" />
         </div>
+    </section>
+
+    <canvas id="myCanvas" width="200" height="50"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+        gradient.addColorStop(0, '#fbc2eb');
+        gradient.addColorStop(1, '#a6c1ee');
+    
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+
+        ctx.font = '20px Arial';
+        ctx.fillStyle = '#133';
+        ctx.fillText(' 🌷', 85 , 35);
+    </script>
+    
+    <section class="media">
+        <h2>Experience More</h2>
+        <audio controls>
+            <source src="audio/sample2.mp3" type="audio/mpeg">
+            <source src="audio/sample2.ogg" type="audio/ogg">
+        </audio>
+        <video controls width="300">
+            <source src="video/sample2.mp4" type="video/mp4">
+            <source src="video/sample2.ogg" type="video/ogg">
+        </video>
     </section>
 
     <footer class="footer">
