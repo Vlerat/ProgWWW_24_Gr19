@@ -4,11 +4,28 @@ window.onload = function () {
 
 document.getElementById('order-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    const type = document.getElementById('candle-type').value;
-    const quantity = document.getElementById('quantity').value;
-    const delivery = document.getElementById('delivery').value;
-    document.getElementById('order-summary').innerText = 
-        `Order Summary: ${quantity} ${type} candles to be delivered on ${delivery}.`;
+    try {
+        const type = document.getElementById('candle-type').value;
+        const quantity = document.getElementById('quantity').value;
+        const delivery = document.getElementById('delivery').value;
+        const coupon = document.getElementById('coupon').value;
+
+        if (!type || !quantity || !delivery) {
+            throw "All fields must be filled out!";
+        }
+
+        let discount = 0;
+        const couponRegex = /[A-Za-z0-9]{5,10}/i;
+        if (couponRegex.test(coupon)) {
+            discount = 0.1; // Example discount for valid coupon code
+        }
+
+        const totalPrice = (parseInt(quantity) * 15.99 * (1 - discount)).toFixed(2); // Assuming price per candle is $15.99
+        document.getElementById('order-summary').innerText = 
+            `Order Summary: ${quantity} ${type} candles to be delivered on ${delivery}. Total Price: $${totalPrice}.`;
+    } catch (error) {
+        alert("Error: " + error);
+    }
 });
 
 const draggable = document.querySelector('.draggable');
@@ -23,3 +40,15 @@ if (navigator.geolocation) {
 } else {
     document.getElementById('geolocation').innerText = "Geolocation is not supported by this browser.";
 }
+
+if (window.Worker) {
+    const worker = new Worker('worker.js');
+    worker.postMessage('Start processing data');
+    worker.onmessage = function (e) {
+        console.log('Worker says: ' + e.data);
+    };
+}
+
+$('.buy-now').on('click', function () {
+    $(this).fadeOut(500).fadeIn(500);
+});

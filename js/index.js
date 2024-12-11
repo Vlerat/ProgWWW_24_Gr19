@@ -1,8 +1,7 @@
+
+
+
     window.onload = function () {
-        alert("Welcome to Candle Shop! 🌟");
-    };
-    window.onload = function () {
-        alert("Welcome to Candle Shop! 🌟");
         const canvas = document.getElementById('myCanvas');
         const ctx = canvas.getContext('2d');
         const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
@@ -13,6 +12,7 @@
         ctx.font = '20px Arial';
         ctx.fillStyle = '#133';
         ctx.fillText('🌷', 85, 35);
+        
     };
     
     const draggableBox = document.getElementById("draggable-box");
